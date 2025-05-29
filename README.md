@@ -1,14 +1,26 @@
 # BrawlStats
 
-This Python app uses the [Brawl Stars API](https://developer.brawlstars.com/) to fetch and track your recent battles and brawler trophy history. It stores the data persistently and generates an interactive graph to visualize trophy progression over time for selected brawlers.
+This Python app uses the [Brawl Stars API](https://developer.brawlstars.com/) to track and visualize player stats over time, including:
+
+- **Trophy progression per brawler**
+- **Overall ranked points history**
+
+The app stores all data persistently and generates interactive graphs for visual analysis.
 
 ---
 
 ## Features
 
-- Connects to the official Brawl Stars API using your player tag.
-- Retrieves and stores recent battles without duplicating existing data.
-- Tracks trophies earned by each brawler in matches you've played.
-- Saves all historical match data in a CSV file (`brawler_battles.csv`).
-- Generates an interactive, toggleable line chart (`brawler_trophies_plot.html`) showing trophy progression for multiple brawlers.
-- Lets you filter brawlers dynamically by name for focused analysis.
+### 📈 Brawler Trophy Tracker
+- Pulls your 25 most recent battles
+- Tracks trophies for each brawler used
+- Saves all data to `brawler_battles.csv`
+- Produces an interactive graph (`brawler_trophies_plot.html`) showing trophy progression for each brawler
+- Allows you to dynamically select or toggle brawlers to view
+
+### 🏆 Ranked Points Tracker
+- Fetches your current `rankedPoints` from your profile
+- Appends the current time and value to `ranked_progress.csv`
+- Generates an interactive graph (`ranked_points_plot.html`) showing your ranked points over time
+
+---
